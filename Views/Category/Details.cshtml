@@ -1,0 +1,151 @@
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div class="col-md-6 p-lg-5 mx-auto my-5">
+        <h1 class="display-3 fw-bold">Aradığın Kitaplar Burada</h1>
+        <h3 class="fw-normal text-muted mb-3">Karar vermen için buradayız.</h3>
+    </div>
+</div>
+<div class="container d-flex flex-column align-items-stretch">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-flex align-items-stretch">
+        <div class="col">
+            <div class="card shadow-sm">
+                <a href="@Url.Action("Index", "Book")">
+                    <img class="bd-placeholder-img card-img-top" src="https://img.kitapyurdu.com/v1/getImage/fn:11262270/wh:true/wi:500" alt="Örnek Resim" width="100%" height="600">
+                </a>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">ALBERT CAMUS <BR>YABANCI</p>
+                    <p class="card-text">Albert Camus'nün Yabancı adlı eseri, absürdizm felsefesinin önemli bir örneğidir. Roman, Cezayir'de yaşayan ve hayata karşı duyarsız bir tavır sergileyen Meursault adlı bir karakterin hikayesini anlatır. Meursault, annesinin ölümüne kayıtsız kalışı ve işlediği bir cinayetle hayatının altüst oluşu üzerinden sorgulanır. Yargılama sürecinde, toplumun değer yargılarıyla uyumsuzluğu nedeniyle hem suçlanır hem de dışlanır.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <a href="@Url.Action("Index", "Book")">
+                                <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://img.kitapyurdu.com/v1/getImage/fn:11655639/wh:true/wi:800" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">E.M CIORAN <BR>ÇÜRÜMENİN KİTABI</BR> </p>
+                    <p class="card-text">E.M. Cioran’ın Çürümenin Kitabı (Le Livre de Poche), derin bir varoluşsal bunalımı ve hayatın anlamsızlığı üzerine düşünceleri içeren, aforizmalarla dolu felsefi bir eserdir. Cioran, insanın acıyla yoğrulmuş hayatını, ölüm karşısındaki çaresizliğini ve zamanın yıkıcılığını ironik ve nihilist bir bakış açısıyla ele alır. Kitapta, insanın çürüme ve yok oluş sürecine olan kaçınılmaz yolculuğu keskin bir dille anlatılır.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://img.kitapyurdu.com/v1/getImage/fn:11481518/wh:true/wi:800" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">ARTHUR SCHOPENHAUER <BR >MUTLU OLMA SANATI</BR> </p>
+                    <p class="card-text">Arthur Schopenhauer’ın Mutlu Olma Sanatı, hayatı daha az acı verici ve daha huzurlu bir şekilde yaşamanın yollarını irdeleyen bir eserdir. Filozof, mutluluğun kısa süreli ve geçici olduğunu savunurken, insanların mutsuzluktan kaçınmak için belirli tutumlar geliştirmesi gerektiğini öne sürer. Schopenhauer, beklentilerin azaltılmasını, sade bir yaşamı ve içsel huzuru mutluluğun temel taşları olarak sunar. Kitap, pratik önerilerle okuyucuyu bilgelik ve dinginliğe yönlendiren felsefi bir rehber niteliğindedir.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://www.canyayinlari.com/productimages/120758/big/9789750755811_492.jpg" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">FRIEDRICH NIETZSCHE <BR >BÖYLE BUYURDU ZERDÜŞT</BR> </p>
+                    <p class="card-text">Friedrich Nietzsche’nin Böyle Buyurdu Zerdüşt eseri, felsefi bir roman ve şiirsel bir metin olarak, insanın kendini aşma yolculuğunu ve “üstinsan” kavramını işler. Zerdüşt adındaki bilge bir karakter aracılığıyla, ahlakın yeniden değerlendirilmesi, güç istenci ve Tanrı’nın ölümü gibi Nietzsche’nin temel felsefi fikirleri dile getirilir. Kitap, bireyin kendi değerlerini yaratmasını ve varoluşun anlamsızlığı karşısında cesur bir şekilde yaşamasını savunur. Simgesel ve derin anlatımıyla eser, felsefi bir başyapıt olarak kabul edilir.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://www.filizkitabevi.com/u/filizkitabevi/img/c/s/u/suc-ve-ceza72d69a39f035fb121ee43ee474033fd8.jpg" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">DOSTOYEVSKI <BR >SUÇ VE CEZA</BR> </p>
+                    <p class="card-text">Fyodor Dostoyevski'nin Suç ve Ceza adlı eseri, insanın ahlaki ve psikolojik çatışmalarını derinlemesine işleyen bir başyapıttır. Roman, fakir bir öğrenci olan Rodion Raskolnikov'un, yüksek idealler uğruna işlediği cinayeti ve bunun sonuçlarıyla yüzleşmesini anlatır. Raskolnikov'un suçluluk duygusu ve vicdanı, onun içsel çöküşünü tetikler ve eserde ahlaki sorumluluk, suçluluk ve kefaret temaları yoğun bir şekilde işlenir. Dostoyevski, bireyin içsel karmaşasını, toplumla olan ilişkisini ve insan doğasının karanlık yönlerini sorgular. Suç ve Ceza, insan ruhunun derinliklerine inen, güçlü bir felsefi ve psikolojik çözümleme sunar.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://www.iskultur.com.tr/webp/2011/10/annakarenina-2.jpg" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body">
+
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">L.N. TOLSTOY <BR >ANNA KARENINA</BR> </p>
+                    <p class="card-text">Lev Tolstoy'un Anna Karenina adlı eseri, Rus aristokrasisinin içindeki aşk, ihanet ve toplum baskısı gibi temaları işler. Roman, Anna Karenina'nın, evli ve saygın bir kadın olmasına rağmen, Vronski adlı bir subaya olan tutkulu aşkı ile toplumsal normlara karşı gelmesini konu alır. Anna’nın, toplumun ve ailesinin baskısı altında yaşadığı içsel çatışma, trajik bir sona doğru evrilir. Tolstoy, aşkın ve mutluluğun karmaşıklığını, bireysel ve toplumsal değerlerle olan çatışmalarını derinlemesine irdeler. Anna Karenina, insan doğasının karmaşıklığını ve toplumsal yapıların birey üzerindeki etkilerini etkileyici bir şekilde anlatan bir başyapıttır.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://img.kitapyurdu.com/v1/getImage/fn:11736012/wh:true/wi:500" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">HAKAN GÜNDAY <BR >KİNYAS VE KAYRA</BR> </p>
+                    <p class="card-text">Hakan Günday’ın Kinyas ve Kayra adlı eseri, iki gencin içsel dünyalarını ve toplumla olan çatışmalarını derinlemesine keşfeder. Kinyas ve Kayra, hayata karşı duydukları yabancılaşma ve şiddetle yoğrulmuş bir varoluş mücadelesi verir. Kitap, aşk, öfke, intikam ve toplumsal yabancılaşma gibi temalarla, bireylerin içsel boşluklarını ve hayattan umutsuzluklarını yansıtır. Günday, dilindeki keskin ve sert üslupla, karanlık bir dünyanın kapılarını aralar ve okuyucuya, insan ruhunun en derin çatışmalarını gösterir. Kinyas ve Kayra, modern Türk edebiyatının güçlü örneklerinden biri olarak, toplumun kenarındaki bireylerin yaşamını sorgular.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://img.kitapyurdu.com/v1/getImage/fn:11468454/wh:true/miw:200/mih:200" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">SIGMUND FREUD <BR >RÜYALARIN YORUMU</p>
+                    <p class="card-text">Sigmund Freud'un Rüyaların Yorumu eseri, rüyaların bilinçdışının kapılarını araladığını ve insanların bastırılmış düşünce ve arzularını ortaya koyduğunu savunan bir psikolojik çalışmadır. Freud, rüyaların semboller aracılığıyla bilinçdışındaki gizli anlamları açığa çıkardığını iddia eder ve rüyaların, bastırılan dürtülerin, isteklerin ve travmaların bir yansıması olduğuna inanır. Bu eser, psikanaliz teorisinin temel taşlarından biri olarak, rüyaların insanlar için nasıl bir anlam taşıdığı ve bireysel bilinçdışını nasıl şekillendirdiği üzerine derin bir inceleme sunar. Freud, rüyaların analiz edilmesiyle kişinin içsel dünyasını daha iyi anlayabileceğini öne sürer..</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" src="https://img.kitapyurdu.com/v1/getImage/fn:11472268/wh:true/miw:200/mih:200" alt="Örnek Resim" width="100%" height="600">
+                <div class="card-body">
+                    <p style="font-weight: bold; font-size: 23px; text-align: center;" class="card-title">MADELINE MILLER <BR>BEN KİRKE</p>
+                    <p class="card-text">Madeline Miller’ın Ben Kirke adlı eseri, Yunan mitolojisindeki Kirke karakterine farklı bir bakış açısı sunan modern bir yeniden anlatımdır. Kirke, tanrıların ve ölümlülerin dünyasında geçen bu romanda, güç, yalnızlık ve kimlik arayışıyla mücadele eden bir kadın olarak tasvir edilir. Miller, Kirke'nin hayatını, aşklarını ve büyü gücünü keşfederken, ona insani bir boyut kazandırır. Kitap, Kirke'nin hem tanrılarla hem de ölümlülerle olan ilişkilerini, içsel dönüşümünü ve toplumsal dışlanmayı işler. Ben Kirke, mitolojik bir figürü merkezine alarak, kadının gücünü, özgürlüğünü ve direncini derinlemesine inceler.</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm"><i style="font-size: 30px;" class="bi bi-binoculars-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="row my-5 mx-5 gx-2 gx-lg-5 align-items-center">
+    <div class="col-md-5">
+        <div class="book-cover-wrapper">
+            <img class="card-img-top mb-5" src="https://img.kitapyurdu.com/v1/getImage/fn:11262270/wh:true/wi:500" width="300px" height="600px" alt="...">
+            <img class="book-back" src="https://www.canyayinlari.com/productimages/118471/big/9789750724756_171.jpg" alt="Kitap Arka Kapağı">
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="small mb-1">ISBN: 9789750724756 </div>
+        <h1 class="display-5 fw-bolder">Albert Camus <br><span>Yabancı</span></h1>
+        <div class="fs-5 mb-5">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <p class="lead">
+            Albert Camus'nun Yabancı romanı, Cezayir'de yaşayan Fransız bir memur olan Meursault'nun anlamsızlık ve yabancılaşma dolu hayatını konu alır. Roman, Meursault'nun annesinin ölümüne tepkisiz kalışıyla başlar ve onun hayat karşısındaki duyarsızlığını işler. Daha sonra bir cinayet işler ve yargılanırken çevresindekiler, onun suçu kadar hayatı algılayışını da sorgular. Meursault, toplumsal normlara aykırı bir insan olduğu için mahkum edilir. Camus, bu eserinde absürd felsefesini ve insanın yaşamın anlamsızlığına karşı özgürlüğünü vurgular.
+        </p>
+        <div class="row my-5 mx-5 gx-2 gx-lg-5">
+            <button data-bs-toggle="collapse" data-bs-target="#fiyat" style="padding: 5px 15px" class="col-md btn btn-outline-dark flex-shrink-0 mx-1" type="button">
+                <i class="bi-cart-fill me-1"></i>
+                En Uygun Fiyat
+            </button>
+            <button data-bs-toggle="collapse" data-bs-target="#yorum" style="padding: 5px 15px" class="col-md btn btn-outline-dark flex-shrink-0 mx-1" type="button">
+                <i class="bi-book-fill me-1"></i>
+                Okur Yorumları
+            </button>
+
+            <button data-bs-toggle="collapse" data-bs-target="#bilgi" style="padding: 5px 15px" class="col-md btn btn-outline-dark flex-shrink-0 mx-1" type="button">
+                <i class="bi bi-question-circle-fill me-1"></i>
+                İlginç Bilgiler
+            </button>
+            <div id="fiyat" class="collapse">
+                En ucuz şurada cart curt
+                <hr>
+            </div>
+            <div id="yorum" class="collapse">
+                böyle yorumlar var cart curt
+                <hr>
+            </div>
+            <div id="bilgi" class="collapse">
+                böyle ilginç bilgiler var cart curt
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
