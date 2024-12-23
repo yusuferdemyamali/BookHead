@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using BookHead.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Veritabanı bağlantısını burada yapılandırın
+builder.Services.AddDbContext<denemeDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); // connection string'i doğru şekilde ekleyin
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

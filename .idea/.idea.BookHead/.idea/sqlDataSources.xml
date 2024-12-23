@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="f8777a46-6ed2-4195-8c7a-801aeb628c38" name="Microsoft SQL Server (JetBrains) Mapping">
+      <data-sources db="d0cb8616-1368-4e5f-8e42-6892ac632181" />
+      <scope>
+        <node kind="database" qname="bookhead" />
+      </scope>
+    </mapping>
+  </component>
+</project>
