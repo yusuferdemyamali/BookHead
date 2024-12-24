@@ -16,4 +16,7 @@ public class Kitap
     public int ISBN { get; set; }
     public string Yorumlar { get; set; } = "";
     public string İlgincBilgiler { get; set; } = "";
+    public string Satici { get; set; } = "";
+    public float Fiyat { get; set; }
+    public string Url { get; set; } = "";
 }
