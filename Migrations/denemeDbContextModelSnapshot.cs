@@ -59,6 +59,27 @@ namespace BookHead.Migrations
                     b.ToTable("Ayarlar");
                 });
 
+            modelBuilder.Entity("BookHead.Models.AdminUser", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<string>("Kullanici")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sifre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("AdminUsers");
+                });
+
             modelBuilder.Entity("BookHead.Models.Kategori", b =>
                 {
                     b.Property<int>("KategoriId")
@@ -90,9 +111,8 @@ namespace BookHead.Migrations
                     b.Property<int>("ISBN")
                         .HasColumnType("int");
 
-                    b.Property<string>("Kategori")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Kategori")
+                        .HasColumnType("int");
 
                     b.Property<string>("Resim1")
                         .IsRequired()
@@ -132,6 +152,8 @@ namespace BookHead.Migrations
 
                     b.HasKey("KitapID");
 
+                    b.HasIndex("Kategori");
+
                     b.ToTable("Kitaplar");
                 });
 
@@ -161,6 +183,22 @@ namespace BookHead.Migrations
                     b.HasKey("KullaniciId");
 
                     b.ToTable("Kullanicilar");
+                });
+
+            modelBuilder.Entity("BookHead.Models.Kitap", b =>
+                {
+                    b.HasOne("BookHead.Models.Kategori", "Kategoriler")
+                        .WithMany("Kitaplar")
+                        .HasForeignKey("Kategori")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kategoriler");
+                });
+
+            modelBuilder.Entity("BookHead.Models.Kategori", b =>
+                {
+                    b.Navigation("Kitaplar");
                 });
 #pragma warning restore 612, 618
         }

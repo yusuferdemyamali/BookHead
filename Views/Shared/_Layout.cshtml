@@ -13,7 +13,7 @@
 
     <!-- Login CSS dosyasının bağlantısı -->
     <link rel="stylesheet" href="css/login.css">
-    
+
     <!-- Ana CSS dosyasının bağlantısı -->
     <link rel="stylesheet" href="/css/main.css">
 
@@ -57,9 +57,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="@Url.Action("Search", "Category")" method="get">
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="BookHead'te Ara...">
+                                <input type="text" name="query" class="form-control" placeholder="BookHead'te Ara..." required>
                             </div>
                             <button type="submit" class="btn btn-primary" style="background-color: black; color: white; border-color: black;">Ara</button>
                         </form>
@@ -68,10 +68,9 @@
             </div>
         </div>
 
-        <!-- Giriş ve kayıt butonları -->
+        <!-- Giriş ve kayıt butonları kaldırıldı -->
         <div class="col-md-3 text-end">
-            <a class="btn btn-outline-primary me-2" href="@Url.Action("Index", "Login")" role="button" style="font-weight: bold; color: black; background-color: white; border-color: black;">Giriş Yap</a>
-            <a class="btn btn-outline-primary me-2" href="@Url.Action("Index", "Register")" role="button" style="font-weight: bold; color: white; background-color: black; border-color: black;">Kayıt Ol</a>
+            <!-- Giriş yap ve kayıt ol butonları burada kaldırıldı -->
         </div>
     </header>
 </div>
@@ -95,7 +94,7 @@
         <!-- Footer navigasyonu -->
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item"><a href="@Url.Action("Index", "Home")" class="nav-link px-2 text-body-secondary">Ana Sayfa</a></li>
-            <li class="nav-item"><a href="@Url.Action("Index", "Category")" class="nav-link px-2 text-body-secondary" class="nav-link px-2 text-body-secondary">Kitaplar</a></li>
+            <li class="nav-item"><a href="@Url.Action("Index", "Category")" class="nav-link px-2 text-body-secondary">Kitaplar</a></li>
             <li class="nav-item"><a href="@Url.Action("About", "Home")" class="nav-link px-2 text-body-secondary">Hakkımızda</a></li>
         </ul>
     </footer>
@@ -104,6 +103,7 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+@RenderSection("Scripts", required: false) <!-- Bu satırın burada olduğundan emin olun -->
 </body>
 
 </html>

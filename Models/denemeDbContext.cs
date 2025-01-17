@@ -10,7 +10,8 @@ public class denemeDbContext : DbContext
     
     public DbSet<Kullanici> Kullanicilar { get; set; }
     public DbSet<Kitap> Kitaplar { get; set; }
-    public DbSet<Kategori> Kategoriler { get; set; }
     public DbSet<Ayar> Ayarlar { get; set; }
+    public DbSet<AdminUser> AdminUsers { get; set; }
 
+    
 }

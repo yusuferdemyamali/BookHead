@@ -1,19 +1,26 @@
-
+@using BookHead.Controllers
+@using Newtonsoft.Json
+@model BookHead.Models.Kitap
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = Model.İsim;
     Layout = "_Layout";
+
+    // Fiyat karşılaştırma sonuçlarını deserialize et
+    var priceComparisons = string.IsNullOrEmpty(Model.FiyatKarşılaştırmaJson) 
+        ? new List<BookController.BookPriceResult>() 
+        : JsonConvert.DeserializeObject<List<BookController.BookPriceResult>>(Model.FiyatKarşılaştırmaJson);
 }
 
 <div class="row my-5 mx-5 gx-2 gx-lg-5 align-items-center">
     <div class="col-md-5">
         <div class="book-cover-wrapper">
-            <img class="card-img-top mb-5" src="https://img.kitapyurdu.com/v1/getImage/fn:11262270/wh:true/wi:500" width="300px" height="600px" alt="...">
-            <img class="book-back" src="https://www.canyayinlari.com/productimages/118471/big/9789750724756_171.jpg" alt="Kitap Arka Kapağı">
+            <img class="card-img-top mb-5" src="@Model.Resim1" width="300px" height="600px" alt="...">
+            <img class="book-back" src="@Model.Resim2" alt="Kitap Arka Kapağı">
         </div>
     </div>
     <div class="col-md-7">
-        <div class="small mb-1">ISBN: 9789750724756 </div>
-        <h1 class="display-5 fw-bolder">Albert Camus <br><span>Yabancı</span></h1>
+        <div class="small mb-1">ISBN: @Model.ISBN </div>
+        <h1 class="display-5 fw-bolder">@Model.Yazar<br><span>@Model.İsim</span></h1>
         <div class="fs-5 mb-5">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -22,7 +29,7 @@
             <span class="fa fa-star"></span>
         </div>
         <p class="lead">
-            Albert Camus'nun Yabancı romanı, Cezayir'de yaşayan Fransız bir memur olan Meursault'nun anlamsızlık ve yabancılaşma dolu hayatını konu alır. Roman, Meursault'nun annesinin ölümüne tepkisiz kalışıyla başlar ve onun hayat karşısındaki duyarsızlığını işler. Daha sonra bir cinayet işler ve yargılanırken çevresindekiler, onun suçu kadar hayatı algılayışını da sorgular. Meursault, toplumsal normlara aykırı bir insan olduğu için mahkum edilir. Camus, bu eserinde absürd felsefesini ve insanın yaşamın anlamsızlığına karşı özgürlüğünü vurgular.
+            @Model.KitapOzet
         </p>
         <div class="row my-5 mx-5 gx-2 gx-lg-5">
             <button data-bs-toggle="collapse" data-bs-target="#fiyat" style="padding: 5px 15px" class="col-md btn btn-outline-dark flex-shrink-0 mx-1" type="button">
@@ -33,23 +40,133 @@
                 <i class="bi-book-fill me-1"></i>
                 Okur Yorumları
             </button>
-
-            <button data-bs-toggle="collapse" data-bs-target="#bilgi" style="padding: 5px 15px" class="col-md btn btn-outline-dark flex-shrink-0 mx-1" type="button">
-                <i class="bi bi-question-circle-fill me-1"></i>
-                İlginç Bilgiler
-            </button>
+            
             <div id="fiyat" class="collapse">
-                En ucuz şurada cart curt
+                @if (priceComparisons.Any())
+                {
+                    <h5 class="mt-3">Fiyat Karşılaştırması</h5>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Mağaza</th>
+                                <th>Fiyat</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var price in priceComparisons.OrderBy(p => p.Price))
+                            {
+                                <tr>
+                                    <td>@price.StoreName</td>
+                                    <td>@price.Price.ToString("C2")</td>
+                                    <td>
+                                        <a href="@price.StoreUrl" target="_blank" class="btn btn-sm btn-primary">Satın Al</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>Şu anda fiyat karşılaştırması yapılamadı.</p>
+                }
                 <hr>
             </div>
             <div id="yorum" class="collapse">
-                böyle yorumlar var cart curt
-                <hr>
+                @if (!string.IsNullOrEmpty(Model.Yorumlar))
+                {
+                    var yorumlar = JsonConvert.DeserializeObject<List<dynamic>>(Model.Yorumlar);
+
+                    <div class="reviews-container">
+                        @for (int i = 0; i < yorumlar.Count; i++)
+                        {
+                            var yorum = yorumlar[i];
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="user-avatar-container">
+                                        <img src="@yorum.UserAvatar" class="user-avatar">
+                                    </div>
+                                    <div class="user-info">
+                                        <h5 class="user-name">@yorum.UserName</h5>
+                                    </div>
+                                </div>
+                                <p class="review-text">@yorum.Comment</p>
+                            </div>
+
+                            @if (i < yorumlar.Count - 1)
+                            {
+                                <hr class="review-divider">
+                            }
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="no-reviews">Henüz yorum yapılmamış.</p>
+                }
             </div>
-            <div id="bilgi" class="collapse">
-                böyle ilginç bilgiler var cart curt
-                <hr>
-            </div>
+
+            <style>
+                .reviews-container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+
+                .review-card {
+                    margin-bottom: 15px;
+                    padding: 15px 0;
+                }
+
+                .review-header {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                }
+
+                .user-avatar-container {
+                    margin-right: 15px;
+                }
+
+                .user-avatar {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .user-name {
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                .review-text {
+                    color: #333;
+                    line-height: 1.6;
+                }
+
+                .review-divider {
+                    border: 0;
+                    height: 1px;
+                    background-color: #e0e0e0;
+                    margin: 15px 0;
+                }
+
+                .no-reviews {
+                    text-align: center;
+                    color: #888;
+                    padding: 20px;
+                }
+            </style>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Fiyat karşılaştırması için ek işlemler eklenebilir
+        });
+    </script>
+}
