@@ -26,11 +26,13 @@ https://youtu.be/4bXbnMDl5SE
   
 ## Ekran Görüntüleri
 
-  ![Image](https://i.hizliresim.com/2guj8i4.jpg)
-  ![Image](https://i.hizliresim.com/2s6qdbr.jpg)
-  ![Image](https://i.hizliresim.com/ss21iul.jpg)
-  ![Image](https://i.hizliresim.com/ja18xfj.jpg)
-  ![Image](https://i.hizliresim.com/eojadn4.jpg)
+![2guj8i4](https://github.com/user-attachments/assets/13cb7a8d-02ee-4ebc-ade6-bfeece419620)
+ ![2s6qdbr](https://github.com/user-attachments/assets/8ce4db4e-652c-4807-9b64-01e949a969f7)
+ ![ss21iul](https://github.com/user-attachments/assets/3c445efd-0e1f-4a97-9523-e26ae732596f)
+![ja18xfj](https://github.com/user-attachments/assets/1393d5af-82f2-4d65-b7e8-242483e34cce)
+![eojadn4](https://github.com/user-attachments/assets/30f99e22-feb8-401d-b3a0-835958312a8e)
+
+
 ## Öğrenci Bilgileri
 
 - 132130033
