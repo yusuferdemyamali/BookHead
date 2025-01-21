@@ -1,26 +1,36 @@
 
 # BookHead
 
-BookHead kitap satın alırken kararsız kalan kullanıcıların karar vermesine yardımcı olma misyonuyla üretilmiş bir websitesidir. 
+BookHead, kitap satın alırken kararsız kalan kullanıcıların karar verme süreçlerine rehberlik etmek amacıyla geliştirilmiş bir web platformudur. Kullanıcıların kitaplar hakkında detaylı bilgiye ulaşmasını sağlayarak, bilinçli bir seçim yapmalarını kolaylaştırır.
 
+## Proje Hakkında
 
-## Özellikler
+Bu proje, bir kitap tanıtım sitesi olarak tasarlanmış ve geliştirilmiştir. Geliştirici olarak amacım, hem modern bir kullanıcı deneyimi sunmak hem de kullanıcıların kitaplar hakkında detaylı yorum, özet ve incelemelere ulaşabileceği bir platform oluşturmak. Projenin ilgili videosuna aşağıdaki linkten ulaşabilirsiniz.
+https://youtu.be/4bXbnMDl5SE
 
-- Projenin front kısmı HTML, CSS, Bootstrap ve Js kullanılarak tarafımca oluşturulmuştur. Sitenin tasarımı önce Figma tarafında tasarlanılmış, ardından Figma'daki tasarıma en benzer olacak şekilde kodlanmıştır.
-- Projenin Admin arayüzü için AdminLTE temasının sidebarı kullanılmıştır.
-- Projenin backend kısmı MVC şablonuyla ASP Net Core ile inşaa edilmiştir.
-- Projenin veritabanı yönetim sistemi olarak SQL SERVER(SQLEXPRESS) kullanılmıştır.
+# Öne Çıkan Özellikler
+## Frontend (Kullanıcı Arayüzü)
 
-
-
+- Kullanılan Teknolojiler: HTML, CSS, Bootstrap ve JavaScript.
+- Tasarım: Kullanıcı arayüzü önce Figma ile tasarlandı. Ardınan Figma'daki tasarım, gerçeğe en yakın şekilde kodlanarak web ortamına aktarıldı.
+- Site içinde kullanılan logo dahi Canva dan tarafımca oluşturuldu.
+  
+## Backend (Sunucu Tarafı)
+- Teknoloji: ASP.NET Core MVC tasarım şablonu.
+- Yapı: Model-View-Controller (MVC) mimarisi ile geliştirildi.
+ 
+## Admin Paneli:
+- Admin Arayüz: Projede AdminLTE temasının sidebar (yan menü) yapısı kullanılmıştır. Yöneticilerin kitap verilerini kolayca yönetmesine olanak tanır. Kullanıcı kimlik doğrulama, yetkilendirme sistemiyle güvenli bir ortam sunar.
+## Admin Paneli:
+- Sistem: Microsoft SQL Server (SQL Express).
   
 ## Ekran Görüntüleri
 
-  [![Image](https://i.hizliresim.com/2guj8i4.jpg)](https://hizliresim.com/2guj8i4)
-  [![Image](https://i.hizliresim.com/2s6qdbr.jpg)](https://hizliresim.com/2s6qdbr)
-  [![Image](https://i.hizliresim.com/ss21iul.jpg)](https://hizliresim.com/ss21iul)
-  [![Image](https://i.hizliresim.com/ja18xfj.jpg)](https://hizliresim.com/ja18xfj)
-  [![Image](https://i.hizliresim.com/eojadn4.jpg)](https://hizliresim.com/eojadn4)
+  ![Image](https://i.hizliresim.com/2guj8i4.jpg)
+  ![Image](https://i.hizliresim.com/2s6qdbr.jpg)
+  ![Image](https://i.hizliresim.com/ss21iul.jpg)
+  ![Image](https://i.hizliresim.com/ja18xfj.jpg)
+  ![Image](https://i.hizliresim.com/eojadn4.jpg)
 ## Öğrenci Bilgileri
 
 - 132130033
