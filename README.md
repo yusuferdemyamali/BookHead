@@ -21,7 +21,7 @@ https://youtu.be/4bXbnMDl5SE
  
 ## Admin Paneli:
 - Admin Arayüz: Projede AdminLTE temasının sidebar (yan menü) yapısı kullanılmıştır. Yöneticilerin kitap verilerini kolayca yönetmesine olanak tanır. Kullanıcı kimlik doğrulama, yetkilendirme sistemiyle güvenli bir ortam sunar.
-## Admin Paneli:
+## Veri Tabanı:
 - Sistem: Microsoft SQL Server (SQL Express).
   
 ## Ekran Görüntüleri
