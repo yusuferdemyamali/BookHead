@@ -5,9 +5,7 @@ BookHead, kitap satın alırken kararsız kalan kullanıcıların karar verme s�
 
 ## Proje Hakkında
 
-Bu proje, bir kitap tanıtım sitesi olarak tasarlanmış ve geliştirilmiştir. Geliştirici olarak amacım, hem modern bir kullanıcı deneyimi sunmak hem de kullanıcıların kitaplar hakkında detaylı yorum, özet ve incelemelere ulaşabileceği bir platform oluşturmak. Projenin ilgili videosuna aşağıdaki linkten ulaşabilirsiniz.
-https://youtu.be/4bXbnMDl5SE
-
+Bu proje, bir kitap tanıtım sitesi olarak tasarlanmış ve geliştirilmiştir. Geliştirici olarak amacım, hem modern bir kullanıcı deneyimi sunmak hem de kullanıcıların kitaplar hakkında detaylı yorum, özet ve incelemelere ulaşabileceği bir platform oluşturmak. 
 # Öne Çıkan Özellikler
 ## Frontend (Kullanıcı Arayüzü)
 
