@@ -29,12 +29,3 @@ Bu proje, bir kitap tanıtım sitesi olarak tasarlanmış ve geliştirilmiştir.
  ![ss21iul](https://github.com/user-attachments/assets/3c445efd-0e1f-4a97-9523-e26ae732596f)
 ![ja18xfj](https://github.com/user-attachments/assets/1393d5af-82f2-4d65-b7e8-242483e34cce)
 ![eojadn4](https://github.com/user-attachments/assets/30f99e22-feb8-401d-b3a0-835958312a8e)
-
-
-## Öğrenci Bilgileri
-
-- 132130033
-- Yusuf Erdem Yamalı
-
-
-  
